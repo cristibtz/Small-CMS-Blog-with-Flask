@@ -4,3 +4,4 @@ instance
 myblog/__pycache__
 myblog/myenv
 myblog/static/photos
+myblog/static/fontawesome*
