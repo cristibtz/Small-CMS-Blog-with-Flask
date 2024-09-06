@@ -1,0 +1,35 @@
+.links a {
+    display: block;
+    margin: 10px auto;
+    background-color: #B60E00;
+    width: fit-content;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.upload-form .form-group {
+    display: block;
+    width: 100%;
+}
+
+.upload-form label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.upload-form input[type="file"] {
+    margin-bottom: 10px;
+    display: block;
+    margin: 10px auto;
+    width: 30%;
+}

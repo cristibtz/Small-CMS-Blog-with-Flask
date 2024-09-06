@@ -1,0 +1,13 @@
+.info-code {
+    font-size: 14px;
+    text-align: center;
+    background-color: black;
+    padding:5px;
+}
+
+img {
+    margin: 5px;
+    max-width: 85%;
+    height: auto;
+    margin: 10px;
+}

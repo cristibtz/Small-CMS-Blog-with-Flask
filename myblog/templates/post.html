@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+<meta name="description" content= '{{ description }}'>
+
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+
+<span>{{ CTF_website }}</span> <span> > </span> <span>{{ category }}</span>
+
+{{content | safe}}
+
+{% endblock %}

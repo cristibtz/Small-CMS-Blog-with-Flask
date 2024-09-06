@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<h1>Manage</h1>
+
+<br>
+<div class="links">
+    <a href="{{ url_for('create_post.create_post_view') }}" >Create Post</a>
+    <a href="{{ url_for('display_post.all_posts')}}" >Show all posts</a>    
+</div>
+<form action="{{ url_for('upload_image.upload_img') }}" method="post" enctype="multipart/form-data" class="upload-form">
+    
+    <div class="form-group">
+        <label for="image">Upload Photo:</label>
+        <input type="file" name="image" accept="image/*">
+    </div>
+    <button type="submit">Upload</button>
+
+</form>
+
+{% endblock %}
+

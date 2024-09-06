@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='create_post.css')}}">
+<style>
+    .content-code {
+        font-size: 12px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+{% endblock %}
+  <h1>Edit post</h1>
+
+  <form method="post">
+
+    <label for="title">Post/page title</label>
+    <input type="text" name="title" required value="{{ post.title }}">
+
+    <label for="description">Description</label>
+    <input type="text" name="description" required value="{{ post.description }}">
+
+    <label for="CTF_website">CTF website</label>
+    <input type="text" name="CTF_website" placeholder="null" required value="{{ post.CTF_website }}">
+
+    <label for="category">Category</label>
+    <input type="text" name="category" required value="{{ post.category }}">
+
+    <label for="content">Content</label>
+    <textarea id="summernote" name="content" required></textarea>
+    
+    <input type="submit" value="Edit content">
+  </form>
+
+  <div>
+    <h4>Content source code, copy into textarea and modify.</h4>
+    <div class="content-code">
+        <p>
+            {{ post.content }}
+        </p>
+    </div>
+  </div>
+
+
+  <script>
+    $('#summernote').summernote({
+          placeholder: 'Write post content here...',
+          tabsize: 2,
+          height: 400
+  });
+  </script>
+{% endblock %}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 24px;
+    }
+}
+
+@media (min-width:400px) and (max-width: 991px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 399px) {
+    body {
+        font-size: 16px; /* Smaller font size */
+        overflow-wrap: break-word; /* Prevents overflow by breaking long words */
+        word-wrap: break-word; /* Legacy support for older browsers */
+    }
+
+    /* Adjustments for specific elements that may cause overflow */
+    .container, .wrapper, .content {
+        padding: 5px; /* Adjust padding */
+        width: 100%; /* Ensure elements do not exceed the screen width */
+    }
+}
+
+:root {
+    --main: #EA1200;
+}
+
+.josefin-sans-medium {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pangolin-regular {
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fjalla-one-regular {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: "Josefin Sans", "Fjala One", sans-serif;
+}
+
+.navbar {
+    background-color: black;
+    border-bottom: 1px solid var(--main);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--main);
+}
+
+#content {
+    background: black;
+    color: var(--main);
+    flex-grow: 1;
+}
+
+#content {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 2vh;
+    text-shadow: 5px 0 15px var(--main);
+}
+
+.footer {
+    background-color: black;
+    border-top: 1px solid var(--main);
+}

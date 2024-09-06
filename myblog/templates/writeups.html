@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='writeups.css') }}">
+{% endblock %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    <h3>Here is a list of CTF websites or contests for which you can find my writeups on their challenges.</h3>
+    <p>They are either under the form of a webpage on the site or a PDF file which you need to download.</p>
+    <div class="links">
+        {% if not ctf_websites %}
+            <p>There are no writeups available at the moment. Please check back later.</p>
+        {% else %}
+        {% for website in ctf_websites%}
+            {% if website != "null" %}
+                <li><a href="{{ url_for('writeups_routes.website_writeups', website=website.CTF_website) }}">{{ website.CTF_website }}</a></li>
+            {%endif%}
+        {% endfor %}
+        {% endif %}
+    </div>
+
+{% endblock %}

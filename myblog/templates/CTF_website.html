@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='writeups.css') }}">
+{% endblock %}
+{% block content %}
+    <h1>{{ title }}</h1>
+
+
+    {% for category, writeups in categories_writeups.items() %}
+    <h2 class="challenges">{{ category }}</h2>
+    <ul class="challenges">
+        {% for writeup in writeups %}
+            <li><a href="{{ url_for('display_post.post', title=writeup.title) }}">{{ writeup.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    
+
+{% endblock %}

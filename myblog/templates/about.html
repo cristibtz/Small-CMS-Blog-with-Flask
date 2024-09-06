@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <meta name="description" content="About page">
+{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <h2>Here I'll share a little bit more information about myself.</h2>
+    <br>
+    <h4>My name is Cristian Branet and I'm 20 years old. Currently, I study Applied Electronics at FILS Faculty from Politehnica University.</h4>
+    <br>
+    <h4>
+        In IT, my main areas of interest are web-related and network-related. 
+        Currently, I'm studying for CCNA certification and I'm also learning web development with Python framework and LAMP suite.
+        I also like the CyberSecurity domain, playing a lot of CTFs in my free time mainly on <a href="https://tryhackme.com/" target="_blank">TryHackMe</a>,
+        <a href="https://www.hackinghub.io/" target="_blank">HackingHub</a> and <a href="https://cyber-edu.co/" target="_blank">CyberEdu</a> platforms.
+        I don't momentarly know if I want to pursue a career in CyberSecurity as I'm only at the beggining so I just take it step by step learning the basics.
+    </h4>
+    <br>
+    <h4>Besides some areas of IT, I'm also interested in learning foreign languages, my current focus being Spanish.</h4>
+    <br>
+    <h4>
+        Currently, I built this website as a project for learning and testing things, but it will also serve as a portfolio in my career.
+        So, here's my <a href="{{ url_for('static', filename='CV.pdf') }}" target="_blank">CV</a> if you are interested in finding more about me.
+    </h4>
+
+{% endblock %}

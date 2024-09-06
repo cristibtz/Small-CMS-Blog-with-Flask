@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='create_post.css')}}">
+{% endblock %}
+
+{% block content %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+{% endblock %}
+  <h1>Create post</h1>
+
+  <form method="post">
+
+    <label for="title">Post/page title</label>
+    <input type="text" name="title" required>
+
+    <label for="description">Description</label>
+    <input type="text" name="description" required>
+
+    <label for="CTF_website">CTF website</label>
+    <input type="text" name="CTF_website" placeholder="null" required>
+
+    <label for="category">Category</label>
+    <input type="text" name="category" required>
+
+    <label for="content">Content</label>
+    <textarea id="summernote" name="content" required></textarea>
+    
+    <input type="submit" value="Add content">
+  </form>
+
+
+  <script>
+    $('#summernote').summernote({
+          placeholder: 'Write post content here...',
+          tabsize: 2,
+          height: 400
+  });
+  </script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block head %}
+<meta name="description" content= "I'm Cristian, 1st year student at UPB, and this is my website.">
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}
+{% block content %}
+    <h1>Welcome!</h1>
+    <h3>I'm Cristian, 1st year student at UPB, and this is my website.</h2>
+    <p>I wanted to start a personal project and the idea of a website came to my mind.
+        Wishing to learn more about web development and server administration, 
+        I decided to build this website from scratch using Flask and host it remotely.
+
+    </p>
+    <p>Here you can find some of my other <a href="{{ url_for('main_routes.projects') }}" >projects</a> and <a href="{{ url_for('writeups_routes.writeups') }}">CTF writeups</a>.</p>
+    <p>I will also write some articles about interesting or useful things and also about
+        my journey in the world of IT.
+    </p>
+
+    <div class="links">
+        <h4>Below, I'll leave some useful links:</h4>
+        <li><i class="fa-solid fa-user"></i>&nbsp;<a href="{{ url_for('main_routes.about') }}" target="_blank">About me</a></li>
+        <li><i class="fa-brands fa-github"></i>&nbsp;<a href="https://github.com/cristibtz" target="_blank">Github</a> </li>
+        <li><i class="fa-brands fa-instagram"></i>&nbsp;<a href="https://instagram.com/cristibtz/" target="_blank">Instagram</a> </li>
+        <li><i class="fa-brands fa-linkedin"></i>&nbsp;<a href="#">LinkedIn</a> </li>
+        <li><a href="https://www.atlantic.net/dedicated-server-hosting/how-to-install-flask-with-nginx-and-gunicorn-on-ubuntu-22-04/">Tutorial to configure and deploy Flask app</a></li>
+    </div>
+{% endblock %}

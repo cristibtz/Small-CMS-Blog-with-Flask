@@ -1,0 +1,22 @@
+.links h4 {
+    text-decoration: underline;
+    color: white;
+}
+.links li {
+    list-style-type: none;
+}
+.links a{
+    color: #EA1200;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+i{
+    color: white;
+}
